@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/vlmain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fondopollos"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarmain"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary_dark"
+        android:elevation="4dp"
+        android:theme="@style/ToolbarTheme"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_marginBottom="10sp"
+        android:fontFamily="@font/gothica1black"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="INGRESAR GRANJA A MONITOREAR"
+        android:textColor="@color/blackcolor"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etxnumero"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginRight="30sp"
+        android:layout_marginBottom="10sp"
+        android:capitalize="characters"
+        android:fontFamily="@font/gothica1black"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="3442121212"
+        android:inputType="phone"
+        android:paddingLeft="30sp"
+        android:paddingRight="30sp"
+        android:textSize="25sp" />
+
+    <CheckBox
+        android:id="@+id/ingalways"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:text="INGRESAR SIEMPRE CON ESTA GRANJA" />
+
+    <Button
+        android:id="@+id/btnlog"
+        android:layout_width="150sp"
+        android:layout_height="60sp"
+        android:layout_marginBottom="10sp"
+        android:fontFamily="@font/gothica1black"
+        android:text="INGRESO"
+        app:backgroundTint="@color/primary" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:fontFamily="@font/gothica1black"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="ULTIMOS ACCESOS"
+        android:textColor="@color/blackcolor"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="484dp"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:scrollbarStyle="outsideInset">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="30sp"
+            android:paddingRight="30sp">
+
+            <ListView
+                android:id="@+id/lvgranjas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/txtresultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <!--
+    <ImageView
+        android:id="@+id/logoprontec"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="-90sp"
+        android:layout_marginBottom="10sp"
+        app:srcCompat="@drawable/pronteclogoh" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10sp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Nº DE CELULAR"
+        android:textColor="@color/blackcolor"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etxnumero"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:layout_marginBottom="10sp"
+        android:capitalize="characters"
+        android:gravity="center_horizontal|center_vertical"
+        android:inputType="phone"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        android:textSize="30sp" />
+
+    <Spinner
+        android:id="@+id/spultgranjas"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:layout_marginBottom="10sp" />
+
+    <Button
+        android:id="@+id/btnlog"
+        android:layout_width="150sp"
+        android:layout_height="60sp"
+        android:layout_marginBottom="10sp"
+        android:text="INGRESO"
+        app:backgroundTint="@color/primary" />
+
+    <Button
+        android:id="@+id/btnsalir"
+        android:layout_width="150sp"
+        android:layout_height="60sp"
+        android:text="SALIR"
+        app:backgroundTint="@color/secondary_text" />
+      -->
+
+</LinearLayout>

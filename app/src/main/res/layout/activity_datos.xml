@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".DatosActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbardatos"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary_dark"
+        android:elevation="4dp"
+        android:theme="@style/ToolbarTheme"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <TextView
+        android:id="@+id/txtresultdata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="53sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_orange_dark"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtgalponview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gothica1black"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingTop="10sp"
+                    android:paddingBottom="10sp"
+                    android:text="GALPON LAS MARIAS"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spgalponesdisp"
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginLeft="70sp"
+                    android:layout_marginRight="70sp"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:backgroundTint="@color/primary_dark"
+                    android:backgroundTintMode="multiply"
+                    android:dropDownWidth="match_parent"
+                    android:dropDownSelector="@color/primary_dark"
+                    android:fadingEdge="vertical"
+                    android:foregroundGravity="center_vertical|center"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingLeft="50sp"
+                    android:spinnerMode="dropdown"
+                    android:theme="@style/Spinner" />
+
+                <View
+                    android:id="@+id/divider4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="2sp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:id="@+id/txtactivated"
+                    android:layout_width="match_parent"
+                    android:layout_height="40sp"
+                    android:layout_weight="1"
+                    android:background="@color/primary_dark"
+                    android:fontFamily="@font/gothica1black"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="00-00-0000"
+                    android:textColor="@color/blackcolor"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/divider5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtvalor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-20sp"
+                        android:layout_marginBottom="-10sp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/barlowcondensedbolditalic"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:shadowColor="#111111"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:text="00°C"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="110sp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtview2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:fontFamily="@font/gothica1black"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="MENU DE FUENTE DE DATOS"
+                    android:textColor="@color/blackcolor"
+                    android:textSize="10sp" />
+
+                <Spinner
+                    android:id="@+id/spmenudatos"
+                    style="@style/Widget.AppCompat.Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:layout_gravity="center|center_horizontal|center_vertical"
+                    android:layout_marginLeft="70sp"
+                    android:layout_marginTop="5sp"
+                    android:layout_marginRight="70sp"
+                    android:layout_marginBottom="10sp"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:backgroundTint="@color/primary_dark"
+                    android:backgroundTintMode="multiply"
+                    android:dropDownWidth="match_parent"
+                    android:dropDownSelector="@color/primary_dark"
+                    android:fadingEdge="vertical"
+                    android:foregroundGravity="center_vertical|center"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingLeft="50sp"
+                    android:spinnerMode="dropdown"
+                    android:theme="@style/Spinner" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtminvallbl"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="-4sp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/gothica1black"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="MINIMO"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtmaxvallbl"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-4sp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/gothica1black"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="MAXIMO"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtminval"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/barlowcondensedbolditalic"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="0°C"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:id="@+id/txtmaxval"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/barlowcondensedbolditalic"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="0°C"
+                        android:textColor="@android:color/background_dark"
+                        android:textSize="30sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider11"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="-5sp"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="1dp"
+                android:orientation="vertical"
+                android:paddingTop="5sp">
+
+                <Button
+                    android:id="@+id/btntraerdatos"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:background="@drawable/btn_datos"
+                    android:drawableLeft="@drawable/ic_datos"
+                    android:drawablePadding="-20sp"
+                    android:fontFamily="@font/gothica1black"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingLeft="50sp"
+                    android:paddingRight="50sp"
+                    android:text="LEER DATOS"
+                    android:textColor="@drawable/txt_btn_dato"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/divider17"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#00000000" />
+
+                <Button
+                    android:id="@+id/btngrafica"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:background="@drawable/btn_datos"
+                    android:drawableLeft="@drawable/ic_action_name"
+                    android:drawablePadding="-20sp"
+                    android:fontFamily="@font/gothica1black"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingLeft="50sp"
+                    android:paddingRight="50sp"
+                    android:text="GRAFICA"
+                    android:textColor="@drawable/txt_btn_dato"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/divider18"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#00000000" />
+
+                <Button
+                    android:id="@+id/btnlog"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:background="@drawable/btn_datos"
+                    android:drawableLeft="@drawable/ic_log"
+                    android:drawablePadding="-20sp"
+                    android:enabled="false"
+                    android:fontFamily="@font/gothica1black"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingLeft="50sp"
+                    android:paddingRight="50sp"
+                    android:text="ACTIVIDAD"
+                    android:textColor="@drawable/txt_btn_dato"
+                    android:textSize="15sp" />
+
+                <View
+                    android:id="@+id/divider20"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#00000000" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="60sp"
+    android:layout_marginRight="60sp"
+    android:background="@drawable/fondopollos"
+    android:descendantFocusability="beforeDescendants"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:id="@+id/lyolvido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
+            android:fontFamily="@font/gothica1black"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="SOLICITAR CONTRASEÑA"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etxmailpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:drawableLeft="@android:drawable/ic_menu_edit"
+            android:ems="10"
+            android:fontFamily="@font/gothica1black"
+            android:gravity="center_horizontal|center_vertical"
+            android:hint="USUARIO O CORREO"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnsolicitarolv"
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:layout_marginBottom="10sp"
+            android:fontFamily="@font/gothica1black"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="SOLICITAR"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtregistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gothica1black"
+            android:gravity="center"
+            android:text="NO TIENE CUENTA? REGISTRARSE"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyregistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txtreg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
+            android:fontFamily="@font/gothica1black"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="SOLICITAR REGISTRO"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etxmailreg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@android:drawable/ic_menu_edit"
+            android:ems="10"
+            android:fontFamily="@font/gothica1black"
+            android:gravity="center"
+            android:hint="CORREO"
+            android:inputType="textEmailAddress" />
+
+        <Button
+            android:id="@+id/btnsolicitarreg"
+            android:layout_width="match_parent"
+            android:layout_height="70sp"
+            android:layout_marginBottom="10sp"
+            android:fontFamily="@font/gothica1black"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="SOLICITAR"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtolvido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gothica1black"
+            android:gravity="center"
+            android:text="OLVIDO SU CONTRASEÑA?"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
