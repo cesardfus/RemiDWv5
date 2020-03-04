@@ -151,13 +151,21 @@
 
                 <Button
                     android:id="@+id/btnaceptar"
-                    android:layout_width="200sp"
+                    android:layout_width="100sp"
                     android:layout_height="60sp"
                     android:layout_weight="1"
                     android:enabled="false"
                     android:fontFamily="@font/gothica1black"
                     android:text="ACEPTAR"
                     android:textColor="@color/blackcolor" />
+
+                <Button
+                    android:id="@+id/btncancelarreadme"
+                    android:layout_width="100sp"
+                    android:layout_height="60sp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gothica1black"
+                    android:text="CANCELAR" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 

@@ -500,7 +500,7 @@ public class GraficaActivity extends AppCompatActivity implements OnChartGesture
                 PropiedadesXAxis(fechasChart);
 
                 ylAxis = mChart.getAxisLeft();
-                PropiedadesYAxis(50f, -20f);
+                PropiedadesYAxis(50f, -10f);
 
                 data = new LineData(dataSets);
                 mChart.setData(data);

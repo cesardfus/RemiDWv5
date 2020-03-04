@@ -16,7 +16,7 @@ public class Readme extends AppCompatActivity {
 
     private SharedPreferences preferences;
     private static final String PREFS_NAME = "PrefsFile";
-    private Button btnaceptar;
+    private Button btnaceptar, btncancelar;
     private CheckBox chekpermision;
 
     @Override
@@ -24,7 +24,10 @@ public class Readme extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_readme);
 
+        preferences = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+
         btnaceptar = findViewById(R.id.btnaceptar);
+        btncancelar = findViewById(R.id.btncancelarreadme);
         chekpermision = findViewById(R.id.chkpermiso);
 
         chekpermision.setOnClickListener(new View.OnClickListener() {
@@ -32,6 +35,9 @@ public class Readme extends AppCompatActivity {
             public void onClick(View view) {
                 if (chekpermision.isChecked()){
                     btnaceptar.setEnabled(true);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putBoolean("pref_fuse", true);
+                    editor.apply();
                 } else{
                     btnaceptar.setEnabled(false);
                 }
@@ -45,6 +51,13 @@ public class Readme extends AppCompatActivity {
                 n.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 n.putExtra("acepto", true);
                 getApplicationContext().startActivity(n);
+            }
+        });
+
+        btncancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finishAffinity();
             }
         });
 

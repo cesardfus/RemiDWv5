@@ -1,10 +1,12 @@
 package com.prontec.remidw;
 
+import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -29,6 +31,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
 import androidx.core.content.res.ResourcesCompat;
 
 import com.google.firebase.database.DataSnapshot;
@@ -87,6 +90,14 @@ public class DatosActivity extends AppCompatActivity {
         funciones = new Funciones();
 
         inicio();
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED) {
+            Log.d("PLAYGROUND", "Permission is not granted, requesting");
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.SEND_SMS}, 123);
+        } else {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.SEND_SMS}, 123);
+            Log.d("PLAYGROUND", "Permission is granted");
+        }
 
         /*-- ACA OBTENGO LA CANTIDAD DE GALPONES --*/
         myRef = mDatabase.child("granjas").orderByChild("telefono").equalTo(telefono).getRef();
@@ -444,6 +455,17 @@ public class DatosActivity extends AppCompatActivity {
     public void finish() {
         super.finish();
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        if (requestCode == 123) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Log.d("PLAYGROUND", "Permission has been granted");
+            } else {
+                Log.d("PLAYGROUND", "Permission has been denied or request cancelled");
+            }
+        }
     }
 
 }
